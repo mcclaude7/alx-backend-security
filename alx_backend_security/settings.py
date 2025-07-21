@@ -98,6 +98,17 @@ CACHES = {
     }
 }
 
+# Rate limiting settings
+RATELIMIT_ENABLE = True
+
+RATELIMIT_CACHE = 'default'  # uses default Django cache
+
+# Define rate limits for different user types
+RATELIMITS = {
+    'authenticated': '10/m',  # 10 requests per minute
+    'anonymous': '5/m',       # 5 requests per minute
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
