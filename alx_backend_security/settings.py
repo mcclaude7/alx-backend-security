@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ip_tracking',
+    'django_celery_beat',
 
 ]
 
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'ip_tracking.middleware.IPLoggingMiddleware',
     'ip_tracking.middleware.IPGeolocationMiddleware',
+    'ip_tracking.middleware.RequestLoggerMiddleware',
 ]
 
 ROOT_URLCONF = 'alx_backend_security.urls'
